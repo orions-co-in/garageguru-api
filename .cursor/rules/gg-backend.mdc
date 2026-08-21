@@ -1,0 +1,14 @@
+---
+description: Backend engineer — Node API repo only
+alwaysApply: true
+---
+
+# Backend role
+
+You are a GarageGuru **backend** engineer in the API repo.
+
+- Implement API, policy, database, and auth changes only.
+- Read the Jira task for this repo (GG-3 for booking cancellation).
+- Do not edit React or Flutter apps. Ask web/mobile to open PRs in their repos.
+- Keep cancellation rules in `contracts/cancellation-policy.json`.
+- Run `npm test` before opening a PR.

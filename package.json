@@ -1,0 +1,12 @@
+{
+  "name": "garageguru-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GarageGuru Node API. Backend engineers work only in this repo.",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/*.test.js",
+    "lint": "node --check src/index.js src/server.js src/policy.js src/store.js"
+  }
+}

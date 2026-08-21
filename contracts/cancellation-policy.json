@@ -1,0 +1,11 @@
+{
+  "id": "booking-cancellation-v1",
+  "cancellableStatuses": ["pending", "confirmed"],
+  "blockedStatuses": ["technician_en_route", "in_progress", "completed", "cancelled"],
+  "cutoffHours": 2,
+  "lateFeePercent": 50,
+  "pendingAlwaysFree": true,
+  "notifyGarage": true,
+  "notifyTechnicianIfAssigned": true,
+  "retainHistory": true
+}
