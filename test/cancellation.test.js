@@ -32,7 +32,10 @@ test("TS-01 pending cancel is free", () => {
 });
 
 test("TS-02 confirmed 5h away is free", () => {
-  const decision = evaluateCancel(booking({ slotStart: new Date(Date.now() + 5 * 36e5).toISOString() }), policy);
+  const decision = evaluateCancel(
+    booking({ slotStart: new Date(Date.now() + 5 * 36e5).toISOString() }),
+    policy,
+  );
   assert.equal(decision.allowed, true);
   assert.equal(decision.feePaise, 0);
 });
@@ -74,7 +77,13 @@ test("cancel endpoint records garage and technician events", async () => {
   });
   assert.equal(res.status, 200);
   const events = store.events();
-  assert.equal(events.some((e) => e.audience === "garage"), true);
-  assert.equal(events.some((e) => e.audience === "technician"), true);
+  assert.equal(
+    events.some((e) => e.audience === "garage"),
+    true,
+  );
+  assert.equal(
+    events.some((e) => e.audience === "technician"),
+    true,
+  );
   app.close();
 });

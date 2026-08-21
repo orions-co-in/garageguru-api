@@ -67,7 +67,7 @@ export function createApp({ store, policy }) {
       if (!decision.allowed) {
         return json(res, 409, { error: decision.code, booking, decision });
       }
-      let reason = "";
+      let reason;
       try {
         const body = await readBody(req);
         reason = body.reason || "";

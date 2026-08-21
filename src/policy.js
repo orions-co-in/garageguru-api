@@ -17,7 +17,10 @@ export function evaluateCancel(booking, policy, now = new Date()) {
   if (!booking) {
     return { allowed: false, code: "NOT_FOUND", feePaise: 0 };
   }
-  if (policy.blockedStatuses.includes(booking.status) || !policy.cancellableStatuses.includes(booking.status)) {
+  if (
+    policy.blockedStatuses.includes(booking.status) ||
+    !policy.cancellableStatuses.includes(booking.status)
+  ) {
     return { allowed: false, code: "NOT_CANCELLABLE", feePaise: 0 };
   }
 

@@ -7,6 +7,14 @@
   "scripts": {
     "start": "node src/index.js",
     "test": "node --test test/*.test.js",
-    "lint": "node --check src/index.js src/server.js src/policy.js src/store.js"
+    "lint": "eslint src test",
+    "format": "prettier --write src test",
+    "format:check": "prettier --check src test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.8.1",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6"
   }
 }
